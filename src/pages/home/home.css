@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.homeContainer {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #DEF8D6;
+    
+}
+
+.homeContainer header {
+    position: sticky;
+}

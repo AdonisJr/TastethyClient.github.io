@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.mainContainer {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #DEF8D6;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+}
+
+.mainContainer .paginate {
+    display: flex;
+    gap: 5px;
+}
+
+.mainContainer .paginate button {
+    width: 100px;
+    cursor: pointer;
+    padding: 2px 5px;
+    background-color: #008C79;
+    border: 2px solid #008C79;
+    transition: .6s;
+    border-radius: 5px;
+}
+
+.mainContainer .paginate button:hover {
+    background-color: white;
+    color: #008C79;
+}

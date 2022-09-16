@@ -1,0 +1,76 @@
+form {
+  background-color: white;
+  height: 100%;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+form .updateTitle {
+  position: relative;
+  width: 100%;
+  padding: 1em;
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  color: #9EB23B;
+}
+
+form .updateTitle .closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: red;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+form .updateTitle .closeButton:hover {
+  color: black;
+}
+
+form .formControl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form .formControl label {
+  padding-left: 10px;
+}
+
+form .formControl input,
+form .formControl select {
+  padding: 5px 10px;
+}
+
+form .formControl button {
+  cursor: pointer;
+  background-color: #9EB23B;
+  border: 2px solid #9EB23B;
+  padding: 5px 10px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+form .formControl button:hover {
+  background-color: white;
+  color: #9EB23B;
+}

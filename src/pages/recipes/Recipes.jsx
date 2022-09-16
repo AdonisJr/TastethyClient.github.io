@@ -1,5 +1,5 @@
 import './recipes.css';
-import React,{ useEffect } from 'react';
+import React from 'react';
 import HomeLogic from '../home/HomeLogic';
 import { useSelector } from 'react-redux';
 import List from '../../reusableComponent/listContainer/List';
@@ -11,8 +11,6 @@ export default function Recipes() {
     const {handleNextSearch, handlePrevSearch} = HomeLogic();
   
     const recipes = useSelector((state)=> state.recipes.value);
-    const userDetails = useSelector((state)=>state.user.value);
-  
 
   return (
     <div className='recipesContainer'>

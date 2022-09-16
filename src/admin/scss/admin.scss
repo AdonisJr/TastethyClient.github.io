@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.admin {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #727945;
+    display: flex;
+    header {
+        height: 100vh;
+        min-width: 20%;
+        background-color: black;
+        // NAVBAR SECTION
+        .navbar {
+            position: fixed;
+            height: 100vh;
+            min-width: 20%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .toggle {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: #727945;
+                cursor: pointer;
+                transition: .5s;
+                &:hover {
+                    color: #9EB23B;
+                    border: 1px solid #9EB23B;
+                }
+            }
+            .logo {
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                .title {
+                    font-size: 35px;
+                    font-weight: bold;
+                    color: #9EB23B;
+                    span {
+                        font-size: 35px;
+                        font-weight: bold;
+                        color: #727945;
+                    }
+                }
+            }
+            .buttons {
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                ul {
+                    width: 100%;
+                    height: 100%;
+                    padding: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 5px;
+                    li {
+                        width: 100%;
+                        background-color: white;
+                        text-align: center;
+                        cursor: pointer;
+                        font-size: 22px;
+                        padding: .5em;
+                        background-color: #9EB23B;
+                        border: 2px solid #9EB23B;
+                        transition: .5s;
+                        &:hover {
+                            background-color: white;
+                        }
+                    }
+                    .active {
+                        background-color: white;
+                    }
+                }
+            }
+            .account {
+                height: 30%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: .5em;
+                padding: .5em;
+                label {
+                    font-size: 20px;
+                    width: 100%;
+                    text-align: center;
+                }
+                button {
+                    background-color: #727945;
+                    border: 2px solid #727945;
+                    transition: .5s;
+                    cursor: pointer;
+                    padding: 10px;
+                    font-weight: 600;
+                    &:hover {
+                        background-color: white;
+                        color: #727945;
+                    }
+                }
+                h1 {
+                    width: 100%;
+                    text-align: center;
+                    color: #9EB23B;
+                    font-weight: 400;
+                    font-size: 20px;
+                }
+            }
+        }
+        // END NAVBAR SECTION
+    }
+    main {
+        padding: 1em;
+        width: 80%;
+    }
+}

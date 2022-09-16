@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.overlay .modal {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    min-height: 70vh;
+    background-color: white;
+    z-index: 1000;
+    padding: 1em 0;
+}
+
+.overlay .modal .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: red;
+    background-color: white;
+    transition: .6s;
+}
+
+.overlay .modal .closeButton:hover {
+    color: black;
+}
+
+.overlay .modal .head {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    padding: 1em;
+}
+
+.overlay .modal .head .info .recipeName {
+    font-size: 30px;
+    font-weight: 600;
+    color: #9EB23B;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.overlay .modal .head .info .dishType {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: .1em;
+}
+
+.overlay .modal .head .info .dietLabels {
+    letter-spacing: 1px;
+}
+
+.overlay .modal .body {
+    background-color: #9EB23B;
+    padding: .5em;
+}
+
+.overlay .modal .body .nutrients {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.overlay .modal .body .nutrientsValue {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid white;
+    padding: .5em;
+}
+
+
+/* FONTS SIZES AND DESIGN */
+
+.overlay .modal .body .nutrientsValue .left .container .calories {
+    font-size: 26px;
+    margin-top: 1em;
+}
+
+.overlay .modal .body .nutrientsValue .left .container .caloriesValue {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 1em;
+}
+
+.overlay .modal .body .nutrientsValue .middle .container .digest {
+    font-size: 20px;
+}
+
+.overlay .modal .body .nutrientsValue .end .container .totalNutrients {
+    font-size: 18px;
+}
+
+.overlay .modal .body .nutrientsValue .value {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/*END FONTS SIZES AND DESIGN */
+
+.overlay .modal .body .nutrientsValue .left,
+.overlay .modal .body .nutrientsValue .middle,
+.overlay .modal .body .nutrientsValue .end {
+    width: 30%;
+}
+
+.overlay .modal .body .nutrientsValue .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em;
+}
+
+
+/* FOOTER */
+
+.overlay .modal .footer {
+    width: 100%;
+    padding: 1em;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.overlay .modal .footer .ingredients {
+    font-size: 24px;
+    font-weight: bold;
+    color: #9EB23B;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.overlay .modal .footer .value {
+    padding: .5em;
+}
+
+@media screen and (max-width: 750px) {
+    .overlay .modal {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        /* edited */
+    }
+    .overlay {
+        padding-top: 0;
+        /* edited */
+    }
+    .overlay .modal .head .info .dishType {
+        display: none;
+    }
+    .overlay .modal .head .info .dietLabels {
+        display: none;
+    }
+    .overlay .modal .body .nutrients {
+        display: none;
+    }
+    .overlay .modal .body .nutrientsValue {
+        display: none;
+    }
+}

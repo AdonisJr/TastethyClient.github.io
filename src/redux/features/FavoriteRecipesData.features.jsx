@@ -10,8 +10,12 @@ const favoriteRecipesDataSlice = createSlice({
         clearFavoriteRecipesData: (state, action)=>{
             state.value = [];
         },
+        removeFavoriteRecipeData: (state, action)=>{
+            state.value.splice(action.payload, 1);
+        }
+        
     } 
 })
 
-export const {addFavoriteRecipesData, clearFavoriteRecipesData} = favoriteRecipesDataSlice.actions;
+export const { addFavoriteRecipesData, clearFavoriteRecipesData, removeFavoriteRecipeData } = favoriteRecipesDataSlice.actions;
 export default favoriteRecipesDataSlice.reducer;

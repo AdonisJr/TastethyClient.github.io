@@ -1,14 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './favorites.css';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import Navbar from '../../components/navbar/Navbar';
 import { useSelector } from 'react-redux';
 import List from '../../reusableComponent/listContainer/List';
 
 export default function Favorites() {
-
-  const navigate = useNavigate();
 
   const favoriteRecipes = useSelector((state)=>state.favoriteRecipesData.value)
 
@@ -22,13 +18,12 @@ export default function Favorites() {
         </header>
         <main>
             { 
-                favoriteRecipes == null ? '' :
-                favoriteRecipes.map(favorite =>{
-                    return <List title="Recipies" recipe={favorite} action="Remove"/>
+                favoriteRecipes.length === 0 ? 'No record found' :
+                favoriteRecipes.map((favorite, index) =>{
+                    return <List title="Recipies" id={index} recipe={favorite} action="Remove"/>
                 })
             }
         </main>
-        <span onClick={()=>navigate('/')}>CLose</span>
     </div>
   )
 }

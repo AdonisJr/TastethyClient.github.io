@@ -1,13 +1,13 @@
 import React,{ useEffect } from 'react';
 import './navbar.css';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import swal from 'sweetalert';
 
 import * as authApi from '../../api/auth';
-import * as favoriteApi from '../../api/recipies';
+import * as recipeApi from '../../api/recipies';
 
-import { logout, login } from '../../redux/features/Users.features';
+import { logout, login } from '../../redux/features/User.features';
 import { clearRecipes } from '../../redux/features/Recipes.features';
 import { setFavoriteRecipe } from '../../redux/features/FavoriteRecipes.features';
 
@@ -17,6 +17,7 @@ import HomeLogic from '../../pages/home/HomeLogic';
 
 export default function Navbar() {
 
+  const navigate = useNavigate();
   const {keywords, handleSearchInput, handleSearch, handleFavoriteRecipes} = HomeLogic();
   const dispatch = useDispatch();
 
@@ -39,6 +40,9 @@ export default function Navbar() {
         swal("Successfully logout", {
           icon: "success",
         });
+        setTimeout(()=>{
+          navigate('/');
+        },1500)
       } 
     });
   
@@ -66,7 +70,7 @@ export default function Navbar() {
   // SET FAVORITE RECIPES
 
   useEffect(()=>{
-   favoriteApi.getFavoriteRecipes(token)
+   recipeApi.get(token)
       .then( response =>{
           dispatch(setFavoriteRecipe(response.data))
       }).catch(error =>{
@@ -75,16 +79,14 @@ export default function Navbar() {
   
   },[])
 
-
   if(!userDetails)return <h1>'Loading'</h1>
-
 
   return (
     <div className='navbarContainer'>
       {/* Logo */}
         <div className="logo">
             {/* <h1 className='logo'>Taste<span>tify</span></h1> */}
-            <a href="/"><h1 className='logo'>Taste<span>thy</span></h1></a>
+            <a href="/"><h1 className='logo'>Taste<span>tify</span></h1></a>
         </div>
 
         {/* search  */}
@@ -133,7 +135,7 @@ export default function Navbar() {
                     
                 {/* END FAVORITE PAGE */}
 
-              <h3>{userDetails.first_name + ", " + userDetails.last_name}</h3>
+              <h3 className='userName'>{userDetails.first_name + ", " + userDetails.last_name}</h3>
               <button onClick={handleLogout}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-box-arrow-right" viewBox="0 0 16 16">
                   <path fillRule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>

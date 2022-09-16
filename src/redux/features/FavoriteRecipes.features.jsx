@@ -9,7 +9,7 @@ export const favoriteRecipesSlice = createSlice({
         },
         setFavoriteRecipe: (state, action) =>{
             state.value = action.payload;
-        },
+        }
     }
 })
 

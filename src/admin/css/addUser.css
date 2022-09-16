@@ -1,0 +1,36 @@
+.addUser {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: white;
+  padding: 1em;
+}
+
+.addUser .content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.addUser .content .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #9EB23B;
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+  font-weight: 500;
+}

@@ -6,7 +6,7 @@ import * as authApi from '../../api/auth';
 import { ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux';
-import { login } from '../../redux/features/Users.features';
+import { login } from '../../redux/features/User.features';
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -23,10 +23,11 @@ export default function Login() {
 
         await authApi.login(credentials)
         .then(response =>{
-          
+
           localStorage.setItem('token', response.data.accessToken)
           setCredentials(initalState)
           dispatch(login(response.data.data))
+
           const Alert = () => toast.success('Successfully Login')
           Alert();
           navigate('/redirect')

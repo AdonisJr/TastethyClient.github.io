@@ -77,7 +77,7 @@
     align-items: center;
     cursor: pointer;
     margin-right: 10px;
-    color: #9EB23B;
+    color: black;
     padding: 2px;
     transition: .6s;
 }
@@ -161,4 +161,38 @@
 .navbarContainer .signUp:hover {
     background-color: white;
     color: black;
+}
+
+@media screen and (max-width: 750px) {
+    .navbarContainer {
+        flex-direction: column;
+        height: auto;
+        padding: 0;
+        /* edited */
+        width: 100%;
+    }
+    .navbarContainer .logo {
+        width: 100%;
+        display: flex;
+        order: 1;
+        /* justify-content: center; */
+        /* edited */
+    }
+    .navbarContainer .search {
+        width: 100%;
+        padding: 1em;
+        order: 3;
+        /* edited */
+    }
+    .navbarContainer .links {
+        width: 100%;
+        justify-content: center;
+        padding: .5em;
+        order: 2;
+        background-color: #535739;
+        /* edited */
+    }
+    .navbarContainer .links .userName {
+        color: white;
+    }
 }

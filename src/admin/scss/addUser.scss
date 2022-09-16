@@ -1,0 +1,23 @@
+.addUser {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: white;
+    padding: 1em;
+    .content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .title {
+            display: flex;
+            justify-content: center;
+            background-color: #9EB23B;
+            padding: 10px;
+            font-size: 30px;
+            color: white;
+            font-weight: 500;
+        }
+    }
+}

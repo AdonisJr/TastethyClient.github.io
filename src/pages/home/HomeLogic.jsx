@@ -6,7 +6,7 @@ import * as authApi from '../../api/auth';
 import axios from 'axios';
 import * as favoriteApi from '../../api/recipies';
 
-import { login } from '../../redux/features/Users.features';
+import { login } from '../../redux/features/User.features';
 
 import {useDispatch, useSelector} from 'react-redux';
 import { addRecipes } from '../../redux/features/Recipes.features';
@@ -111,7 +111,7 @@ export default function HomeLogic() {
     // SET FAVORITE RECIPES
   
     useEffect(()=>{
-     favoriteApi.getFavoriteRecipes(token)
+     favoriteApi.get(token)
         .then( response =>{
             dispatch(setFavoriteRecipe(response.data))
         }).catch(error =>{

@@ -27,7 +27,7 @@
 .registerContainer .container .image {
     width: 40%;
     height: auto;
-    background-color: #FF6A0F;
+    background-color: #9EB23B;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     padding: 10px;
@@ -35,6 +35,30 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.registerContainer .container .image .already {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    margin: 10px 0px;
+}
+
+.registerContainer .container .image a {
+    background-color: #3F4A3C;
+    border: 2px solid #3F4A3C;
+    color: white;
+    text-decoration: none;
+    width: 40%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.registerContainer .container .image a:hover {
+    background-color: white;
+    color: #3F4A3C;
 }
 
 .registerContainer form {

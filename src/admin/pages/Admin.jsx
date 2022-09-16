@@ -10,8 +10,7 @@ import AdminLogic from './AdminLogic';
 import { useSelector } from 'react-redux';
 
 export default function Admin() {
- // const Alert = () => toast.success('Successfully added')
-  //           Alert();
+
   const {getAllUsers} = AdminLogic();
   const activePage = useSelector((state)=>state.activePage.value);
 
@@ -19,6 +18,7 @@ export default function Admin() {
     getAllUsers()
   },[])
   
+
   return (
     <div className='admin'>
       <ToastContainer

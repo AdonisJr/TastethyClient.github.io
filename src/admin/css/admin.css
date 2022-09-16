@@ -150,6 +150,7 @@
 .admin header .navbar .account button {
   background-color: #727945;
   border: 2px solid #727945;
+  color: white;
   -webkit-transition: .5s;
   transition: .5s;
   cursor: pointer;

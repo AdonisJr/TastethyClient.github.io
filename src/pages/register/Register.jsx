@@ -80,13 +80,8 @@ export default function Register() {
             />
       <div className="container">
         <div className="image">
-          <div>
-            <h1>Already have an account?</h1>
-            <a href="/login">Sign in</a>
-          </div>
-          
-          <img src="" alt="" />
-          <h2>wewe</h2>
+          <h1 className='already'>Already have an account?</h1>
+          <a href="/login">Sign in</a>
         </div>
         <RegisterForm handleFocused={handleFocused} isFocused={isFocused} credentials={credentials} handleInput={handleInput} handleSubmit={handleSubmit}/>
       </div>

@@ -52,7 +52,6 @@ export default function AddUserForm(props) {
       })
     }
   }
-  console.log(accessToken)
 
   return (
     <form noValidate onSubmit={handleSubmit}>
@@ -95,7 +94,7 @@ export default function AddUserForm(props) {
         </div>
         <div className="formControl">
             <label htmlFor="age">Age</label>
-            <input type="text" name="age" placeholder='Age' onChange={handleUserInput} value={userInput.age}  />
+            <input type="number" name="age" placeholder='Age' onChange={handleUserInput} value={userInput.age} required />
         </div>
         <div className="formControl">
           <label htmlFor="role">Role</label>
@@ -106,7 +105,7 @@ export default function AddUserForm(props) {
         </div>
         <div className="formControl" style={{display: action === 'Add' ? 'flex' : 'none'}}>
             <label htmlFor="password">Password</label>
-            <input type="password" name='password' placeholder='Password' onChange={handleUserInput} value={userInput.password} required={action === 'Add' ? 'true' : 'false'} />
+            <input type="password" name='password' placeholder='Password' onChange={handleUserInput} value={userInput.password} required={action === 'Add' ? true : false} />
         </div>
         <div className="formControl">
           <button>{action === 'Add' ? 'SAVE' : 'UPDATE'}</button>

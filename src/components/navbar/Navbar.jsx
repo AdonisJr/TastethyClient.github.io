@@ -45,8 +45,6 @@ export default function Navbar() {
         },1500)
       } 
     });
-  
-  
   }
 
   const token = localStorage.getItem('token') ? localStorage.getItem('token') : '';

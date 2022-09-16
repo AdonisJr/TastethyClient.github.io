@@ -7,10 +7,15 @@ export default function Redirect() {
 
   const userDetails = useSelector((state)=> state.user.value)
   const navigate = useNavigate();
+// console.log(userDetails)
+  !userDetails ? navigate('/') : 
 
   setTimeout(()=>{
-    userDetails.role === 'Admin' ? navigate('/admin') :
-    navigate('/')
+    if(userDetails.role === 'Admin'){
+      navigate('/admin')
+    }else{
+      navigate('/')
+    }
   },1500)
   
   return (

@@ -10,7 +10,7 @@ export const get = async(accessToken) =>{
 }
 
 export const add = async(accessToken, recipe_id) =>{
-    return await axios.post('/recipes/favorite',{ recipe_id },
+    return await axios.post('/api/recipes/favorite',{ recipe_id },
     {
         headers:{
             Authorization: `Bearer ${accessToken}`

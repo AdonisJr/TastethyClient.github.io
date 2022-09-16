@@ -27,6 +27,39 @@
     background-color: #9EB23B;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginContainer .container .image .newHere {
+    font-size: 35px;
+    color: white;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+.loginContainer .container .image p {
+    color: white;
+}
+
+.loginContainer .container .image a {
+    margin: 10px 0px;
+    background-color: #727945;
+    color: white;
+    text-decoration: none;
+    width: 40%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    transition: .5s;
+    border: 2px solid #727945;
+}
+
+.loginContainer .container .image a:hover {
+    background-color: white;
+    color: #727945;
 }
 
 .loginContainer .container form {

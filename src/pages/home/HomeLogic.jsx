@@ -135,7 +135,6 @@ export default function HomeLogic() {
                 // dispatch(addFavoriteRecipesData(response.data.recipe))
               })
         })
-        console.log(data)
         navigate('/recipes/favorites')
     }
   useEffect(()=>{
@@ -144,7 +143,7 @@ export default function HomeLogic() {
   
   
     if(!userDetails)return <h1>'Loading'</h1>
-
+  
   return {keywords, setKeywords, handleSearch, 
     handleSearchInput, handleNextSearch, handlePrevSearch, handleFavoriteRecipes }
 

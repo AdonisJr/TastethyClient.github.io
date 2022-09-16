@@ -5,12 +5,16 @@ import './login.css';
 import * as authApi from '../../api/auth';
 import { ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { login } from '../../redux/features/User.features';
 
 export default function Login() {
+  
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const userDetails = useSelector((state)=>state.user.value)
+  
 
     const initalState = {email: "", password: ""};
     const [credentials, setCredentials] = useState(initalState);
@@ -38,6 +42,8 @@ export default function Login() {
         })
     }
 
+  if(userDetails !== 'none' && userDetails !== null) return navigate('/redirect');
+
   return (
     <div className='loginContainer'>
         <div className="container">
@@ -53,7 +59,10 @@ export default function Login() {
               />
             <LoginForm handleSubmit={handleSubmit} handleInput={handleInput} credentials={credentials} />
             <div className="image">
-                <a href="/register">Sign up</a>
+              <h1 className='newHere'>New here?</h1>
+              <p>Sign up and discover lots of </p>
+              <p>Tasty recipes</p>
+              <a href="/register">Sign up</a>
             </div>
         </div>
     </div>

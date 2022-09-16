@@ -17,3 +17,22 @@
     gap: 2em;
     margin-top: 2em;
 }
+
+.recipesContainer main .paginate {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.recipesContainer main .paginate button {
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    background-color: #727945;
+    border: 2px solid #727945;
+    color: white;
+}
+
+.recipesContainer main .paginate button:hover {
+    background-color: white;
+    color: #727945;
+}

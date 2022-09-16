@@ -1,8 +1,12 @@
 import axios from "axios";
 
 // GET ALL USER
-export const getAll = async() =>{
-    return await axios.get(`/users`);
+export const getAll = async(accessToken) =>{
+    return await axios.get(`/users`, {
+        headers: {
+            Authorization: `Bearer ${accessToken}`
+        }
+    });
 }
 
 // Register USER
